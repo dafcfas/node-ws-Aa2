@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Network - Protect Earth</title>
+    <title>火影忍者尾兽 - 九大尾兽全解析</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         :root {
-            --primary: #2e7d32;
-            --secondary: #4caf50;
-            --accent: #8bc34a;
-            --light: #e8f5e9;
-            --dark: #1b5e20;
-            --text: #333333;
+            --primary: #ff6600;
+            --secondary: #ff9900;
+            --accent: #cc3300;
+            --dark: #333333;
+            --light: #f5f5f5;
+            --text: #444444;
             --white: #ffffff;
         }
 
@@ -27,16 +27,18 @@
             background-color: var(--light);
             color: var(--text);
             line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%23ff6600" opacity="0.05" d="M50,10 C60,0 70,5 70,20 C70,35 60,40 50,30 C40,40 30,35 30,20 C30,5 40,0 50,10 Z"/></svg>');
         }
 
         header {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background: linear-gradient(to right, var(--dark), var(--primary));
             color: var(--white);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
         }
 
         .container {
@@ -61,6 +63,7 @@
 
         .logo i {
             font-size: 2rem;
+            color: var(--secondary);
         }
 
         nav ul {
@@ -82,7 +85,7 @@
         }
 
         nav ul li a:hover {
-            color: var(--accent);
+            color: var(--secondary);
         }
 
         nav ul li a::after {
@@ -92,7 +95,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: var(--accent);
+            background-color: var(--secondary);
             transition: width 0.3s ease;
         }
 
@@ -101,7 +104,7 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
             background-size: cover;
             background-position: center;
             height: 80vh;
@@ -109,30 +112,32 @@
             align-items: center;
             text-align: center;
             color: var(--white);
+            position: relative;
         }
 
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
+            animation: fadeInUp 1s ease-out;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             margin-bottom: 2rem;
         }
 
         .btn {
             display: inline-block;
-            background-color: var(--accent);
+            background-color: var(--primary);
             color: var(--white);
             padding: 0.8rem 2rem;
-            border-radius: 50px;
+            border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
@@ -142,7 +147,7 @@
         }
 
         .btn:hover {
-            background-color: var(--primary);
+            background-color: var(--accent);
             transform: translateY(-3px);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
@@ -182,130 +187,212 @@
             margin: 0 auto;
         }
 
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-img {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-img img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-
-        .about-img:hover img {
-            transform: scale(1.05);
-        }
-
-        .about-text h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 2rem 1rem;
-            background-color: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .stat-item:hover {
-            transform: translateY(-10px);
-        }
-
-        .stat-item i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .stat-item h3 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-item p {
-            color: var(--text);
-        }
-
-        .initiatives {
+        .tailed-beasts {
             background-color: var(--white);
         }
 
-        .initiatives-grid {
+        .beasts-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
 
-        .initiative-card {
+        .beast-card {
             background-color: var(--light);
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
+            border: 2px solid var(--primary);
+            position: relative;
         }
 
-        .initiative-card:hover {
+        .beast-card:hover {
             transform: translateY(-10px);
         }
 
-        .initiative-img {
-            height: 200px;
-            overflow: hidden;
+        .beast-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--primary);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            z-index: 2;
         }
 
-        .initiative-img img {
+        .beast-img {
+            height: 250px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .beast-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
 
-        .initiative-card:hover .initiative-img img {
+        .beast-card:hover .beast-img img {
             transform: scale(1.1);
         }
 
-        .initiative-content {
+        .beast-content {
             padding: 1.5rem;
         }
 
-        .initiative-content h3 {
+        .beast-content h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: var(--dark);
         }
 
-        .initiative-content p {
+        .beast-content p {
+            margin-bottom: 1rem;
+        }
+
+        .beast-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text);
+        }
+
+        .jinchuriki {
+            background: linear-gradient(to right, var(--light), var(--white));
+        }
+
+        .jinchuriki-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .jinchuriki-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            border: 2px solid var(--accent);
+        }
+
+        .jinchuriki-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .jinchuriki-img {
+            height: 250px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .jinchuriki-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .jinchuriki-card:hover .jinchuriki-img img {
+            transform: scale(1.1);
+        }
+
+        .jinchuriki-content {
+            padding: 1.5rem;
+        }
+
+        .jinchuriki-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .jinchuriki-content p {
+            margin-bottom: 1rem;
+        }
+
+        .history {
+            background-color: var(--white);
+        }
+
+        .history-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .history-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .history-text p {
             margin-bottom: 1.5rem;
         }
 
+        .history-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .history-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background-color: #f0f0f0;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .history-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .history-img:hover img {
+            transform: scale(1.05);
+        }
+
         .cta {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background: linear-gradient(to right, var(--primary), var(--accent));
             color: var(--white);
             text-align: center;
             padding: 5rem 0;
@@ -330,7 +417,7 @@
         }
 
         .cta .btn:hover {
-            background-color: var(--accent);
+            background-color: var(--dark);
             color: var(--white);
         }
 
@@ -361,7 +448,7 @@
             left: 0;
             width: 40px;
             height: 2px;
-            background-color: var(--accent);
+            background-color: var(--secondary);
         }
 
         .footer-column p {
@@ -383,7 +470,7 @@
         }
 
         .footer-links li a:hover {
-            color: var(--accent);
+            color: var(--secondary);
             padding-left: 5px;
         }
 
@@ -406,7 +493,7 @@
         }
 
         .social-links a:hover {
-            background-color: var(--accent);
+            background-color: var(--secondary);
             transform: translateY(-5px);
         }
 
@@ -422,20 +509,77 @@
             cursor: pointer;
         }
 
+        .scroll-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 99;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .scroll-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            background-color: var(--dark);
+            transform: translateY(-3px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .floating {
+            animation: float 5s ease-in-out infinite;
+        }
+
         @media (max-width: 992px) {
-            .about-content {
+            .beasts-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .jinchuriki-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .history-content {
                 grid-template-columns: 1fr;
             }
             
-            .initiatives-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
             .footer-content {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .stats {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -455,7 +599,7 @@
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background-color: var(--primary);
+                background-color: var(--dark);
                 flex-direction: column;
                 padding: 1rem 0;
                 text-align: center;
@@ -475,22 +619,17 @@
                 display: block;
             }
             
-            .initiatives-grid {
+            .beasts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .jinchuriki-grid {
                 grid-template-columns: 1fr;
             }
             
             .footer-content {
                 grid-template-columns: 1fr;
             }
-            
-            .stats {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Animation for stats counter */
-        .counter {
-            transition: all 0.5s ease;
         }
     </style>
 </head>
@@ -499,113 +638,559 @@
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <i class="fas fa-seedling"></i>
-                <span>Green Network</span>
+                <i class="fas fa-paw floating"></i>
+                <span>火影忍者尾兽</span>
             </div>
             <nav>
                 <div class="mobile-menu">
                     <i class="fas fa-bars"></i>
                 </div>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#initiatives">Initiatives</a></li>
-                    <li><a href="#get-involved">Get Involved</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#beasts">九大尾兽</a></li>
+                    <li><a href="#jinchuriki">人柱力</a></li>
+                    <li><a href="#history">尾兽历史</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Scroll to top button -->
+    <div class="scroll-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>Protect Our Planet, Preserve Our Future</h1>
-            <p>Join the global movement to create a sustainable world through conservation, education, and community action.</p>
-            <a href="#get-involved" class="btn">Join Our Network</a>
+            <h1>火影忍者尾兽</h1>
+            <p>探索九大尾兽的力量与秘密</p>
+            <a href="#beasts" class="btn">探索尾兽</a>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
+    <!-- Tailed Beasts Section -->
+    <section class="tailed-beasts" id="beasts">
         <div class="container">
             <div class="section-title">
-                <h2>About Green Network</h2>
-                <p>We are a global community dedicated to environmental protection and sustainable development.</p>
+                <h2>九大尾兽</h2>
+                <p>火影忍者世界中九只强大的尾兽，每只都拥有独特的形态和能力</p>
             </div>
-            <div class="about-content">
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team planting trees">
+            <div class="beasts-grid">
+                <!-- 一尾 守鹤 -->
+                <div class="beast-card">
+                    <div class="beast-number">一</div>
+                    <div class="beast-img">
+                        <!-- 一尾守鹤图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">一尾守鹤图片</text>
+                            <circle cx="150" cy="100" r="60" fill="#f4a460" stroke="#8b4513" stroke-width="2"/>
+                            <circle cx="130" cy="80" r="10" fill="#000"/>
+                            <circle cx="170" cy="80" r="10" fill="#000"/>
+                            <path d="M120 130 Q150 150 180 130" stroke="#8b4513" stroke-width="3" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="beast-content">
+                        <h3>一尾 守鹤</h3>
+                        <p>外形为披覆砂皮的土黄色貉，擅长风遁和磁遁忍术，能够操控沙子进行攻击和防御。</p>
+                        <div class="beast-stats">
+                            <div class="stat">
+                                <div class="stat-value">1</div>
+                                <div class="stat-label">尾巴数量</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">沙</div>
+                                <div class="stat-label">元素属性</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">A</div>
+                                <div class="stat-label">危险等级</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>Green Network is committed to creating a sustainable future by protecting natural ecosystems, promoting renewable energy, and empowering communities to take environmental action.</p>
-                    <p>Founded in 2010, we've grown from a small grassroots organization to an international network with over 50,000 members across 120 countries.</p>
-                    <p>Our approach combines scientific research, community engagement, and policy advocacy to address the most pressing environmental challenges of our time.</p>
-                    <a href="#" class="btn">Learn More</a>
+                
+                <!-- 二尾 又旅 -->
+                <div class="beast-card">
+                    <div class="beast-number">二</div>
+                    <div class="beast-img">
+                        <!-- 二尾又旅图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">二尾又旅图片</text>
+                            <ellipse cx="150" cy="100" rx="70" ry="40" fill="#4682b4" stroke="#2f4f4f" stroke-width="2"/>
+                            <circle cx="130" cy="90" r="8" fill="#000"/>
+                            <circle cx="170" cy="90" r="8" fill="#000"/>
+                            <path d="M140 120 Q150 130 160 120" stroke="#2f4f4f" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="beast-content">
+                        <h3>二尾 又旅</h3>
+                        <p>外形为缠绕蓝色火焰的妖猫，能够操控蓝色火焰，速度极快，攻击力强大。</p>
+                        <div class="beast-stats">
+                            <div class="stat">
+                                <div class="stat-value">2</div>
+                                <div class="stat-label">尾巴数量</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">火</div>
+                                <div class="stat-label">元素属性</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">A</div>
+                                <div class="stat-label">危险等级</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="stats">
-                <div class="stat-item">
-                    <i class="fas fa-tree"></i>
-                    <h3 class="counter" data-target="2500000">0</h3>
-                    <p>Trees Planted</p>
+                
+                <!-- 三尾 矶抚 -->
+                <div class="beast-card">
+                    <div class="beast-number">三</div>
+                    <div class="beast-img">
+                        <!-- 三尾矶抚图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">三尾矶抚图片</text>
+                            <ellipse cx="150" cy="120" rx="80" ry="50" fill="#8fbc8f" stroke="#2e8b57" stroke-width="2"/>
+                            <circle cx="130" cy="110" r="6" fill="#000"/>
+                            <circle cx="170" cy="110" r="6" fill="#000"/>
+                            <path d="M140 140 Q150 150 160 140" stroke="#2e8b57" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="beast-content">
+                        <h3>三尾 矶抚</h3>
+                        <p>外形为拥有三条鳍尾的巨龟，背上长有刺菱，擅长水遁忍术，能在水中自由活动。</p>
+                        <div class="beast-stats">
+                            <div class="stat">
+                                <div class="stat-value">3</div>
+                                <div class="stat-label">尾巴数量</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">水</div>
+                                <div class="stat-label">元素属性</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">A</div>
+                                <div class="stat-label">危险等级</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <h3 class="counter" data-target="50000">0</h3>
-                    <p>Active Members</p>
+                
+                <!-- 四尾 孙悟空 -->
+                <div class="beast-card">
+                    <div class="beast-number">四</div>
+                    <div class="beast-img">
+                        <!-- 四尾孙悟空图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">四尾孙悟空图片</text>
+                            <circle cx="150" cy="100" r="60" fill="#cd5c5c" stroke="#8b0000" stroke-width="2"/>
+                            <circle cx="130" cy="80" r="8" fill="#000"/>
+                            <circle cx="170" cy="80" r="8" fill="#000"/>
+                            <path d="M120 130 Q150 150 180 130" stroke="#8b0000" stroke-width="3" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="beast-content">
+                        <h3>四尾 孙悟空</h3>
+                        <p>外形为红色长臂巨猿，自称"水帘洞的美猴王"，能够操控熔遁，口中可喷出高温岩浆。</p>
+                        <div class="beast-stats">
+                            <div class="stat">
+                                <div class="stat-value">4</div>
+                                <div class="stat-label">尾巴数量</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">熔</div>
+                                <div class="stat-label">元素属性</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">A</div>
+                                <div class="stat-label">危险等级</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <i class="fas fa-globe-americas"></i>
-                    <h3 class="counter" data-target="120">0</h3>
-                    <p>Countries Reached</p>
+                
+                <!-- 五尾 穆王 -->
+                <div class="beast-card">
+                    <div class="beast-number">五</div>
+                    <div class="beast-img">
+                        <!-- 五尾穆王图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">五尾穆王图片</text>
+                            <ellipse cx="150" cy="100" rx="70" ry="40" fill="#e6e6fa" stroke="#9370db" stroke-width="2"/>
+                            <circle cx="130" cy="90" r="6" fill="#000"/>
+                            <circle cx="170" cy="90" r="6" fill="#000"/>
+                            <path d="M140 120 Q150 130 160 120" stroke="#9370db" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="beast-content">
+                        <h3>五尾 穆王</h3>
+                        <p>外形为海豚与马的结合体，头长犄角，拥有沸遁能力，能够操控蒸汽，速度和力量兼备。</p>
+                        <div class="beast-stats">
+                            <div class="stat">
+                                <div class="stat-value">5</div>
+                                <div class="stat-label">尾巴数量</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">沸</div>
+                                <div class="stat-label">元素属性</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">A</div>
+                                <div class="stat-label">危险等级</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <i class="fas fa-recycle"></i>
-                    <h3 class="counter" data-target="1500">0</h3>
-                    <p>Cleanup Projects</p>
+                
+                <!-- 六尾 犀犬 -->
+                <div class="beast-card">
+                    <div class="beast-number">六</div>
+                    <div class="beast-img">
+                        <!-- 六尾犀犬图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">六尾犀犬图片</text>
+                            <ellipse cx="150" cy="100" rx="70" ry="40" fill="#f5f5dc" stroke="#d2b48c" stroke-width="2"/>
+                            <circle cx="130" cy="90" r="6" fill="#000"/>
+                            <circle cx="170" cy="90" r="6" fill="#000"/>
+                            <path d="M140 120 Q150 130 160 120" stroke="#d2b48c" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="beast-content">
+                        <h3>六尾 犀犬</h3>
+                        <p>外形为乳白色的蛞蝓，能够分泌强酸黏液，具有腐蚀性，身体柔软可变形。</p>
+                        <div class="beast-stats">
+                            <div class="stat">
+                                <div class="stat-value">6</div>
+                                <div class="stat-label">尾巴数量</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">酸</div>
+                                <div class="stat-label">元素属性</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">A</div>
+                                <div class="stat-label">危险等级</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 七尾 重明 -->
+                <div class="beast-card">
+                    <div class="beast-number">七</div>
+                    <div class="beast-img">
+                        <!-- 七尾重明图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">七尾重明图片</text>
+                            <ellipse cx="150" cy="100" rx="70" ry="40" fill="#daa520" stroke="#b8860b" stroke-width="2"/>
+                            <circle cx="130" cy="90" r="6" fill="#000"/>
+                            <circle cx="170" cy="90" r="6" fill="#000"/>
+                            <path d="M140 120 Q150 130 160 120" stroke="#b8860b" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="beast-content">
+                        <h3>七尾 重明</h3>
+                        <p>外形为长有六翅的甲虫，拥有飞行能力，能够使用鳞粉迷惑敌人，擅长空中战斗。</p>
+                        <div class="beast-stats">
+                            <div class="stat">
+                                <div class="stat-value">7</div>
+                                <div class="stat-label">尾巴数量</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">飞</div>
+                                <div class="stat-label">元素属性</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">A</div>
+                                <div class="stat-label">危险等级</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 八尾 牛鬼 -->
+                <div class="beast-card">
+                    <div class="beast-number">八</div>
+                    <div class="beast-img">
+                        <!-- 八尾牛鬼图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">八尾牛鬼图片</text>
+                            <ellipse cx="150" cy="100" rx="70" ry="40" fill="#708090" stroke="#2f4f4f" stroke-width="2"/>
+                            <circle cx="130" cy="90" r="6" fill="#000"/>
+                            <circle cx="170" cy="90" r="6" fill="#000"/>
+                            <path d="M140 120 Q150 130 160 120" stroke="#2f4f4f" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="beast-content">
+                        <h3>八尾 牛鬼</h3>
+                        <p>外形为牛头章鱼，能够使用墨汁封印和攻击，力量强大，与奇拉比关系良好。</p>
+                        <div class="beast-stats">
+                            <div class="stat">
+                                <div class="stat-value">8</div>
+                                <div class="stat-label">尾巴数量</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">墨</div>
+                                <div class="stat-label">元素属性</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">S</div>
+                                <div class="stat-label">危险等级</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 九尾 九喇嘛 -->
+                <div class="beast-card">
+                    <div class="beast-number">九</div>
+                    <div class="beast-img">
+                        <!-- 九尾九喇嘛图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">九尾九喇嘛图片</text>
+                            <circle cx="150" cy="100" r="60" fill="#ff8c00" stroke="#ff4500" stroke-width="2"/>
+                            <circle cx="130" cy="80" r="8" fill="#000"/>
+                            <circle cx="170" cy="80" r="8" fill="#000"/>
+                            <path d="M120 130 Q150 150 180 130" stroke="#ff4500" stroke-width="3" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="beast-content">
+                        <h3>九尾 九喇嘛</h3>
+                        <p>外形为金色九尾妖狐，拥有最强大的查克拉，能够感知恶意，尾兽玉威力巨大。</p>
+                        <div class="beast-stats">
+                            <div class="stat">
+                                <div class="stat-value">9</div>
+                                <div class="stat-label">尾巴数量</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">阳</div>
+                                <div class="stat-label">元素属性</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">S</div>
+                                <div class="stat-label">危险等级</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Initiatives Section -->
-    <section class="initiatives" id="initiatives">
+    <!-- Jinchuriki Section -->
+    <section class="jinchuriki" id="jinchuriki">
         <div class="container">
             <div class="section-title">
-                <h2>Our Initiatives</h2>
-                <p>Discover the key programs and projects we're implementing to protect our planet.</p>
+                <h2>人柱力</h2>
+                <p>曾经封印尾兽力量的忍者，与尾兽共同生存的特殊存在</p>
             </div>
-            <div class="initiatives-grid">
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://dialogue.earth/content/uploads/2021/04/lessons-from-the-rush-to-reforest-china-dialogue-2400x1599.jpg" alt="Reforestation">
+            <div class="jinchuriki-grid">
+                <div class="jinchuriki-card">
+                    <div class="jinchuriki-img">
+                        <!-- 我爱罗图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">我爱罗图片</text>
+                            <circle cx="150" cy="100" r="40" fill="#f4a460"/>
+                            <rect x="130" y="70" width="40" height="30" rx="5" fill="#8b4513"/>
+                        </svg>
                     </div>
-                    <div class="initiative-content">
-                        <h3>Global Reforestation</h3>
-                        <p>Planting millions of trees worldwide to restore ecosystems, combat climate change, and protect biodiversity.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Ocean Conservation">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Ocean Conservation</h3>
-                        <p>Protecting marine ecosystems, reducing plastic pollution, and promoting sustainable fishing practices.</p>
-                        <a href="#" class="btn">Learn More</a>
+                    <div class="jinchuriki-content">
+                        <h3>我爱罗</h3>
+                        <p>一尾守鹤的人柱力，砂忍者村的风影。曾经因体内封印守鹤而被村民恐惧，后来与鸣人相遇后改变了人生轨迹。</p>
                     </div>
                 </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Renewable Energy">
+                <div class="jinchuriki-card">
+                    <div class="jinchuriki-img">
+                        <!-- 二位由木人图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">二位由木人图片</text>
+                            <circle cx="150" cy="100" r="40" fill="#4682b4"/>
+                            <rect x="130" y="70" width="40" height="30" rx="5" fill="#2f4f4f"/>
+                        </svg>
                     </div>
-                    <div class="initiative-content">
-                        <h3>Renewable Energy</h3>
-                        <p>Promoting solar, wind, and other clean energy sources to reduce dependence on fossil fuels.</p>
-                        <a href="#" class="btn">Learn More</a>
+                    <div class="jinchuriki-content">
+                        <h3>二位由木人</h3>
+                        <p>二尾又旅的人柱力，云忍者村的精英上忍。能够完全控制又旅的力量，但在与晓组织的战斗中牺牲。</p>
+                    </div>
+                </div>
+                <div class="jinchuriki-card">
+                    <div class="jinchuriki-img">
+                        <!-- 矢仓图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">矢仓图片</text>
+                            <circle cx="150" cy="100" r="40" fill="#8fbc8f"/>
+                            <rect x="130" y="70" width="40" height="30" rx="5" fill="#2e8b57"/>
+                        </svg>
+                    </div>
+                    <div class="jinchuriki-content">
+                        <h3>矢仓</h3>
+                        <p>三尾矶抚的人柱力，雾忍者村的四代水影。能够完全控制尾兽之力，但在任期间曾被宇智波带土控制。</p>
+                    </div>
+                </div>
+                <div class="jinchuriki-card">
+                    <div class="jinchuriki-img">
+                        <!-- 老紫图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">老紫图片</text>
+                            <circle cx="150" cy="100" r="40" fill="#cd5c5c"/>
+                            <rect x="130" y="70" width="40" height="30" rx="5" fill="#8b0000"/>
+                        </svg>
+                    </div>
+                    <div class="jinchuriki-content">
+                        <h3>老紫</h3>
+                        <p>四尾孙悟空的人柱力，岩忍者村的忍者。性格固执，与土影不合而离开村子，后被晓组织捕获。</p>
+                    </div>
+                </div>
+                <div class="jinchuriki-card">
+                    <div class="jinchuriki-img">
+                        <!-- 汉图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">汉图片</text>
+                            <circle cx="150" cy="100" r="40" fill="#e6e6fa"/>
+                            <rect x="130" y="70" width="40" height="30" rx="5" fill="#9370db"/>
+                        </svg>
+                    </div>
+                    <div class="jinchuriki-content">
+                        <h3>汉</h3>
+                        <p>五尾穆王的人柱力，岩忍者村的忍者。被称为"蒸汽忍者"，能够使用穆王的沸遁能力。</p>
+                    </div>
+                </div>
+                <div class="jinchuriki-card">
+                    <div class="jinchuriki-img">
+                        <!-- 羽高图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">羽高图片</text>
+                            <circle cx="150" cy="100" r="40" fill="#f5f5dc"/>
+                            <rect x="130" y="70" width="40" height="30" rx="5" fill="#d2b48c"/>
+                        </svg>
+                    </div>
+                    <div class="jinchuriki-content">
+                        <h3>羽高</h3>
+                        <p>六尾犀犬的人柱力，雾忍者村的叛忍。使用吹泡泡的忍术进行战斗，最终被晓组织捕获。</p>
+                    </div>
+                </div>
+                <div class="jinchuriki-card">
+                    <div class="jinchuriki-img">
+                        <!-- 芙图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">芙图片</text>
+                            <circle cx="150" cy="100" r="40" fill="#daa520"/>
+                            <rect x="130" y="70" width="40" height="30" rx="5" fill="#b8860b"/>
+                        </svg>
+                    </div>
+                    <div class="jinchuriki-content">
+                        <h3>芙</h3>
+                        <p>七尾重明的人柱力，泷忍者村的忍者。性格开朗活泼，能够飞行，是少数能够完全控制尾兽力量的人柱力之一。</p>
+                    </div>
+                </div>
+                <div class="jinchuriki-card">
+                    <div class="jinchuriki-img">
+                        <!-- 奇拉比图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">奇拉比图片</text>
+                            <circle cx="150" cy="100" r="40" fill="#708090"/>
+                            <rect x="130" y="70" width="40" height="30" rx="5" fill="#2f4f4f"/>
+                        </svg>
+                    </div>
+                    <div class="jinchuriki-content">
+                        <h3>奇拉比</h3>
+                        <p>八尾牛鬼的人柱力，云忍者村的忍者。与牛鬼关系良好，能够完全控制尾兽力量，是完美人柱力。</p>
+                    </div>
+                </div>
+                <div class="jinchuriki-card">
+                    <div class="jinchuriki-img">
+                        <!-- 漩涡鸣人图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">漩涡鸣人图片</text>
+                            <circle cx="150" cy="100" r="40" fill="#ff8c00"/>
+                            <rect x="130" y="70" width="40" height="30" rx="5" fill="#ff4500"/>
+                        </svg>
+                    </div>
+                    <div class="jinchuriki-content">
+                        <h3>漩涡鸣人</h3>
+                        <p>九尾九喇嘛的人柱力，木叶忍者村的七代火影。最初与九尾关系紧张，后来成为朋友，共同保护忍者世界。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="history" id="history">
+        <div class="container">
+            <div class="section-title">
+                <h2>尾兽历史</h2>
+                <p>了解尾兽的起源、分散与重新聚集的历史</p>
+            </div>
+            <div class="history-content">
+                <div class="history-text">
+                    <h3>尾兽的起源</h3>
+                    <p>尾兽是由六道仙人从十尾的查克拉中分离出来的九只巨大生物。六道仙人在临终前，将十尾的查克拉分成了九份，创造了九只尾兽，以防止十尾的毁灭性力量再次威胁世界。</p>
+                    <p>每只尾兽都拥有独特的形态、能力和性格，尾巴的数量代表了它们的力量等级，九尾拥有最强大的查克拉。</p>
+                    <p>在漫长的历史中，尾兽曾被各国忍者村捕获并封印在人柱力体内，作为战略武器使用。直到第四次忍界大战，尾兽们才真正获得自由。</p>
+                    <a href="https://naruto.fandom.com/zh/wiki/尾兽" target="_blank" class="btn">了解更多历史</a>
+                </div>
+                <div class="history-images">
+                    <div class="history-img">
+                        <!-- 六道仙人创造尾兽图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">六道仙人创造尾兽</text>
+                            <circle cx="150" cy="100" r="50" fill="#ffebcd"/>
+                            <circle cx="140" cy="90" r="5" fill="#000"/>
+                            <circle cx="160" cy="90" r="5" fill="#000"/>
+                            <path d="M130 120 Q150 140 170 120" stroke="#000" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="history-img">
+                        <!-- 尾兽分散各地图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">尾兽分散各地</text>
+                            <circle cx="100" cy="80" r="15" fill="#f4a460"/>
+                            <circle cx="150" cy="60" r="15" fill="#4682b4"/>
+                            <circle cx="200" cy="100" r="15" fill="#8fbc8f"/>
+                            <circle cx="120" cy="140" r="15" fill="#cd5c5c"/>
+                        </svg>
+                    </div>
+                    <div class="history-img">
+                        <!-- 尾兽与人柱力图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">尾兽与人柱力</text>
+                            <circle cx="100" cy="100" r="30" fill="#ff8c00"/>
+                            <circle cx="200" cy="100" r="20" fill="#f0f0f0"/>
+                            <line x1="130" y1="100" x2="180" y2="100" stroke="#000" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="history-img">
+                        <!-- 尾兽重聚图片 -->
+                        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#f0f0f0"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#666">尾兽重聚</text>
+                            <circle cx="150" cy="100" r="40" fill="#ffebcd"/>
+                            <circle cx="130" cy="90" r="5" fill="#000"/>
+                            <circle cx="170" cy="90" r="5" fill="#000"/>
+                            <path d="M140 120 Q150 130 160 120" stroke="#000" stroke-width="2" fill="none"/>
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -615,9 +1200,9 @@
     <!-- CTA Section -->
     <section class="cta" id="get-involved">
         <div class="container">
-            <h2>Join Our Global Movement</h2>
-            <p>Together, we can create a sustainable future for generations to come. Every action counts, no matter how small.</p>
-            <a href="#" class="btn">Become a Member</a>
+            <h2>加入火影忍者粉丝社区</h2>
+            <p>与其他火影忍者粉丝交流，分享你对尾兽和人柱力的见解</p>
+            <a href="https://www.naruto.com" target="_blank" class="btn">访问官方网站</a>
         </div>
     </section>
 
@@ -626,44 +1211,43 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Green Network</h3>
-                    <p>We are dedicated to protecting our planet through collaborative action, education, and sustainable solutions.</p>
+                    <h3>火影忍者尾兽</h3>
+                    <p>探索九大尾兽的力量与秘密，了解人柱力的故事。</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
-                    <h3>Quick Links</h3>
+                    <h3>快速链接</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#initiatives">Initiatives</a></li>
-                        <li><a href="#get-involved">Get Involved</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#beasts">九大尾兽</a></li>
+                        <li><a href="#jinchuriki">人柱力</a></li>
+                        <li><a href="#history">尾兽历史</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Our Programs</h3>
+                    <h3>相关资源</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Reforestation</a></li>
-                        <li><a href="#">Ocean Cleanup</a></li>
-                        <li><a href="#">Wildlife Protection</a></li>
-                        <li><a href="#">Climate Education</a></li>
-                        <li><a href="#">Sustainable Agriculture</a></li>
+                        <li><a href="https://www.naruto.com" target="_blank">官方网站</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/火影忍者" target="_blank">维基百科</a></li>
+                        <li><a href="https://naruto.fandom.com/zh/wiki/火影忍者维基" target="_blank">火影维基</a></li>
+                        <li><a href="https://www.viz.com/shonenjump/chapters/naruto" target="_blank">漫画阅读</a></li>
+                        <li><a href="https://www.crunchyroll.com/naruto-shippuden" target="_blank">动画观看</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Copper Creek Drive, New York</p>
-                    <p><i class="fas fa-phone"></i> +1 (312) 171-0771</p>
-                    <p><i class="fas fa-envelope"></i> support@greennetwork.org</p>
+                    <h3>联系我们</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 北京市朝阳区动漫大道123号</p>
+                    <p><i class="fas fa-phone"></i> +86 10 1234 5678</p>
+                    <p><i class="fas fa-envelope"></i> info@narutofans.com</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Green Network. All rights reserved.</p>
+                <p>&copy; 2023 火影忍者尾兽专题. 保留所有权利. 火影忍者是岸本齐史/集英社的版权作品.</p>
             </div>
         </div>
     </footer>
@@ -673,29 +1257,6 @@
         document.querySelector('.mobile-menu').addEventListener('click', function() {
             document.querySelector('nav ul').classList.toggle('active');
         });
-
-        // Counter Animation
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter');
-            const speed = 200; // The lower the slower
-            
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                
-                const inc = target / speed;
-                
-                if(count < target) {
-                    counter.innerText = Math.ceil(count + inc);
-                    setTimeout(animateCounters, 1);
-                } else {
-                    counter.innerText = target;
-                }
-            });
-        }
-
-        // Initialize counters when page loads
-        window.addEventListener('load', animateCounters);
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -716,7 +1277,34 @@
                 }
             });
         });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Show/hide scroll to top button
+            const scrollToTopBtn = document.querySelector('.scroll-to-top');
+            if (scrollTop > 300) {
+                scrollToTopBtn.classList.add('active');
+            } else {
+                scrollToTopBtn.classList.remove('active');
+            }
+        });
+
+        // Scroll to top functionality
+        document.querySelector('.scroll-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
-
 </html>
